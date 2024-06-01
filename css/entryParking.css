@@ -1,0 +1,241 @@
+/*Font style*/
+
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+:root{
+    --main-color: #fe5b3d;
+    --secont-color: #ffac38;
+    --text-color: #444;
+    --gradient: linear-gradient(#fe5b3d,#ffac38);
+
+}
+
+
+
+/*Custom Scroll Bar*/
+
+html::-webkit-scrollbar{
+    width: 0.5rem;
+} 
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+section{
+    padding: 50px 100px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeff1;
+    padding: 15px 100px;
+    gap: 30px;
+
+}
+
+.logo img{
+    width: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    display: flex;
+
+}
+
+.navbar li {
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.navbar a::after{
+    content:  '';
+    width: 0;
+    height: 3px;
+    background: var(--gradient);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+
+}
+
+.header-btn a{
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.header-btn .signIn{
+    background: #474fa0;
+    color: #FFF;
+    border-radius: 0.5rem;
+
+}
+
+.header-btn .signIn:hover{
+    background-color:var(--main-color) ;
+}
+
+/*Parking form*/
+#containerParking{
+    position: relative;
+    top: 100px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    
+}
+#entryP{
+   
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #474fa0;
+}
+
+
+.sign-container{
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1002;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(77, 77, 77, 0.7);
+    
+}
+#area{
+    padding: 7px;
+    outline: none;
+    border: none;
+    background-color: white;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+
+}
+#description{
+    resize:none;
+}
+.sign-content{
+    border-radius: 6px;
+    position: relative;
+    height: 475px;
+    width:500px;
+    background-color: white;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#signIn-form{
+    width: 450px;
+    transition: all 0.6s ease-out;
+
+}
+
+#signIn-form h1{
+    text-align: center;
+    margin: 20px;
+}
+
+.submit button{
+    background: #474fa0;
+    color: #FFF;
+    padding: 10px 100px;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+.submit button:hover
+{
+    background-color:var(--main-color) ;
+}
+.bx-x{
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top:5px;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    /*transform: 0.3s;*/
+
+}
+.form-control label{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    color: #474fa0;
+}
+
+.form-control input{
+    outline: none;
+    border: none;
+    padding: 4px 0 0;
+    font-size: 14px;
+}
+.form-control:focus-within{
+    border-color: #444;
+}
+
+.form-control-others{
+   margin: 5% auto;
+   text-align: center;
+}
+
+#signUp-form{
+    position: absolute;
+    transform: translate(500px);
+    transition: all 0.6s ease-out;
+    
+}
+
